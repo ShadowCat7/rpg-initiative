@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import withStyles from 'react-jss';
+import { withStyles } from '@material-ui/styles';
 
-import AppRouter from './AppRoutes.jsx';
 import Header from './components/Header.jsx';
+import Card from '@material-ui/core/Card/Card.js';
 
 const styles = (theme) => ({
     container: {
@@ -17,15 +17,15 @@ const styles = (theme) => ({
 
 class Layout extends Component {
     render() {
-        const { classes } = this.props;
+        const { classes, children } = this.props;
 
         return (
             <div className={classes.container}>
                 <Header />
-                <div className={classes.page}>
+                <Card className={classes.page} square>
                     <div className={classes.toolbar} />
-                    <AppRouter />
-                </div>
+                    {children}
+                </Card>
             </div>
         );
     }

@@ -1,17 +1,20 @@
 import React, { Component } from 'react';
-import { ThemeProvider } from 'react-jss';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 
-import Layout from './Layout.jsx';
-import theme from './theme.js';
+import AppRouter from './AppRoutes.jsx';
+import reducer from './redux/reducer.js';
+
+const store = createStore(reducer);
 
 class App extends Component {
     render() {
         return (
-            <ThemeProvider theme={theme}>
-                <Layout />
-            </ThemeProvider>
+            <Provider store={store}>
+                <AppRouter />
+            </Provider>
         );
     }
 }
 
-export default App;
+export default (App);

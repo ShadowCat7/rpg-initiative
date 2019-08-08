@@ -7,7 +7,7 @@ import lightGreen from '@material-ui/core/colors/lightGreen';
 import lime from '@material-ui/core/colors/lime';
 import pink from '@material-ui/core/colors/pink';
 
-export default createMuiTheme({
+export default (options) => createMuiTheme({
     overrides: {
         MuiDivider: {
             root: {
@@ -23,9 +23,9 @@ export default createMuiTheme({
         },
     },
     palette: {
-        // #e91e63
         primary: pink,
         secondary: blue,
+        type: options.darkMode ? 'dark' : 'light',
 
         green,
         grey,

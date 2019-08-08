@@ -1,44 +1,37 @@
 import React, { Component } from 'react';
-import withStyles from 'react-jss';
+import { withStyles } from '@material-ui/styles';
 
-import Switch from '@material-ui/core/Switch';
+import List from '@material-ui/core/List/List.js';
+import InboxIcon from '@material-ui/icons/Inbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import SettingsIcon from '@material-ui/icons/Settings';
+import Divider from '@material-ui/core/Divider/Divider.js';
+
+import NavItem from './NavItem.jsx';
 
 const styles = (theme) => ({
-    menuButton: {
-        marginLeft: '-12px',
-        marginRight: '20px',
+    root: {
+        minWidth: '300px',
     },
-    text: {
-        margin: '0',
-    },
-    switch: {
-        color: theme.palette.grey[900],
-
-        '&$checked': {
-            color: theme.palette.grey[100],
-        },
-    },
-    checked: {},
 });
 
-class Header extends Component {
-    state = {
-        sidebarOpen: false,
-    };
-
-    toggleSidebar = () => {
-        this.setState({ sidebarOpen: !this.state.sidebarOpen });
-    };
-
+class Sidebar extends Component {
     render() {
         const { classes } = this.props;
 
         return (
-            <div>
-                <Switch classes={{ switchBase: classes.switch, checked: classes.checked }} />
+            <div className={classes.root}>
+                <List component="nav">
+                    <NavItem to="/" text="Home Page" Icon={InboxIcon} onClick={this.props.onClose} />
+                    <NavItem to="/characters" text="Characters" Icon={DraftsIcon} onClick={this.props.onClose} />
+                </List>
+                <Divider />
+                <List>
+                    <NavItem to="/settings" text="Settings" Icon={SettingsIcon} onClick={this.props.onClose} />
+                </List>
             </div>
         );
     }
 }
 
-export default withStyles(styles)(Header);
+export default withStyles(styles)(Sidebar);

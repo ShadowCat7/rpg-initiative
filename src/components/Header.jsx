@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import withStyles from 'react-jss';
+import { withStyles } from '@material-ui/styles';
 
 import AppBar from '@material-ui/core/AppBar';
 import Drawer from '@material-ui/core/Drawer';
@@ -10,6 +10,9 @@ import MenuIcon from '@material-ui/icons/Menu';
 import Sidebar from './Sidebar.jsx';
 
 const styles = (theme) => ({
+    header: {
+        backgroundColor: theme.palette
+    },
     menuButton: {
         marginLeft: '-12px',
         marginRight: '20px',
@@ -17,25 +20,28 @@ const styles = (theme) => ({
     text: {
         margin: '0',
     },
+    drawer: {
+        minWidth: '300px',
+    },
 });
 
 class Header extends Component {
     state = {
-        sidebarOpen: false,
+        isSidebarOpen: false,
     };
 
     toggleSidebar = () => {
-        this.setState({ sidebarOpen: !this.state.sidebarOpen });
+        this.setState({ isSidebarOpen: !this.state.isSidebarOpen });
     };
 
     render() {
         const { classes } = this.props;
-        const { sidebarOpen } = this.state;
+        const { isSidebarOpen } = this.state;
 
         return (
             <AppBar position="fixed">
-                <Drawer anchor="right" open={sidebarOpen} onClose={this.toggleSidebar} >
-                    <Sidebar />
+                <Drawer anchor="left" open={isSidebarOpen} onClose={this.toggleSidebar} >
+                    <Sidebar onClose={this.toggleSidebar} />
                 </Drawer>
                 <Toolbar>
                     <IconButton
