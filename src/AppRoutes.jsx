@@ -25,8 +25,8 @@ class AppRouter extends Component {
                 <Router>
                     <Layout>
                         <Switch>
-                            <Route path="/" component={Home} exact />
-                            <Route path="/characters" component={Characters} />
+                            <Route path="/" component={Characters} exact />
+                            <Route path="/initiative" component={Home} />
                             <Route path="/settings" component={Settings} />
                             <Route component={NotFound} />
                         </Switch>

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 
 import List from '@material-ui/core/List/List.js';
-import InboxIcon from '@material-ui/icons/Inbox';
-import DraftsIcon from '@material-ui/icons/Drafts';
-import SettingsIcon from '@material-ui/icons/Settings';
 import Divider from '@material-ui/core/Divider/Divider.js';
+
+import ListIcon from '@material-ui/icons/List';
+import PersonAddIcon from '@material-ui/icons/PersonAdd';
+import SettingsIcon from '@material-ui/icons/Settings';
 
 import NavItem from './NavItem.jsx';
 
@@ -22,8 +23,8 @@ class Sidebar extends Component {
         return (
             <div className={classes.root}>
                 <List component="nav">
-                    <NavItem to="/" text="Home Page" Icon={InboxIcon} onClick={this.props.onClose} />
-                    <NavItem to="/characters" text="Characters" Icon={DraftsIcon} onClick={this.props.onClose} />
+                    <NavItem to="/" text="Recurring Characters" Icon={PersonAddIcon} onClick={this.props.onClose} />
+                    <NavItem to="/initiative" text="Initiative Tracker" Icon={ListIcon} onClick={this.props.onClose} />
                 </List>
                 <Divider />
                 <List>

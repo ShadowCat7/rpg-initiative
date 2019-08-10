@@ -46,12 +46,6 @@ class Settings extends Component {
         });
     };
 
-    onChangeLocalStorage = (e, checked) => {
-        this.props.actions.useLocalStorage({
-            useLocalStorage: checked,
-        });
-    };
-
     render() {
         const {
             classes,
@@ -79,19 +73,19 @@ class Settings extends Component {
                         label="Dark mode"
                     />
                 </FormGroup>
-                <FormGroup>
-                    <FormControlLabel
-                        control={
-                            <Switch
-                                color="primary"
-                                name="useLocalStorage"
-                                onChange={this.onChangeLocalStorage}
-                                checked={useLocalStorage}
-                            />
-                        }
-                        label="Use Local Storage"
-                    />
-                </FormGroup>
+                {/*<FormGroup>*/}
+                    {/*<FormControlLabel*/}
+                        {/*control={*/}
+                            {/*<Switch*/}
+                                {/*color="primary"*/}
+                                {/*name="useLocalStorage"*/}
+                                {/*onChange={this.onChange}*/}
+                                {/*checked={useLocalStorage}*/}
+                            {/*/>*/}
+                        {/*}*/}
+                        {/*label="Use Local Storage"*/}
+                    {/*/>*/}
+                {/*</FormGroup>*/}
             </div>
         );
     }

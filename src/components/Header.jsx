@@ -2,12 +2,12 @@ import React, { Component } from 'react';
 import { withStyles } from '@material-ui/styles';
 
 import AppBar from '@material-ui/core/AppBar';
-import Drawer from '@material-ui/core/Drawer';
 import IconButton from '@material-ui/core/IconButton/IconButton.js';
 import Toolbar from '@material-ui/core/Toolbar/Toolbar.js';
 import Typography from '@material-ui/core/Typography/Typography.js';
 import MenuIcon from '@material-ui/icons/Menu';
 import Sidebar from './Sidebar.jsx';
+import SwipeableDrawer from '@material-ui/core/SwipeableDrawer/SwipeableDrawer.js';
 
 const styles = (theme) => ({
     header: {
@@ -40,9 +40,15 @@ class Header extends Component {
 
         return (
             <AppBar position="fixed">
-                <Drawer anchor="left" open={isSidebarOpen} onClose={this.toggleSidebar} >
+                <SwipeableDrawer
+                    anchor="left"
+                    open={isSidebarOpen}
+                    onOpen={this.toggleSidebar}
+                    onClose={this.toggleSidebar}
+                    hysteresis={0.1}
+                >
                     <Sidebar onClose={this.toggleSidebar} />
-                </Drawer>
+                </SwipeableDrawer>
                 <Toolbar>
                     <IconButton
                         edge="start"

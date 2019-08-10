@@ -21,8 +21,6 @@ export default (state = defaultState, action) => {
                     [action.data.name]: action.data.value,
                 },
             };
-        case 'ASDF':
-            return state;
         default:
             return state;
     }
