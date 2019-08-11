@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "50c4ed73553016628a5415e67406b89f",
+    "revision": "3848fccacac84b6fc3439c5ab9967ac8",
     "url": "/rpg-initiative/index.html"
   },
   {
-    "revision": "38ada46d501003dc7fde",
+    "revision": "3aa4581edf6bd40789d6",
     "url": "/rpg-initiative/static/css/main.c54b00d3.chunk.css"
   },
   {
@@ -12,8 +12,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/rpg-initiative/static/js/2.3890d954.chunk.js"
   },
   {
-    "revision": "38ada46d501003dc7fde",
-    "url": "/rpg-initiative/static/js/main.1f2c3025.chunk.js"
+    "revision": "3aa4581edf6bd40789d6",
+    "url": "/rpg-initiative/static/js/main.512cbcbe.chunk.js"
   },
   {
     "revision": "7ba57d40703cf0fd8f8a",
