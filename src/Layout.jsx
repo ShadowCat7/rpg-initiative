@@ -3,6 +3,7 @@ import { withStyles } from '@material-ui/styles';
 
 import Header from './components/Header.jsx';
 import Card from '@material-ui/core/Card/Card.js';
+import Container from './redux/Container.jsx';
 //import FloorNavigation from './components/FloorNavigation.jsx';
 
 const styles = (theme) => ({
@@ -33,4 +34,4 @@ class Layout extends Component {
     }
 }
 
-export default withStyles(styles)(Layout);
+export default Container(withStyles(styles)(Layout));

@@ -6,6 +6,7 @@ import grey from '@material-ui/core/colors/grey';
 import lightGreen from '@material-ui/core/colors/lightGreen';
 import lime from '@material-ui/core/colors/lime';
 import pink from '@material-ui/core/colors/pink';
+import red from '@material-ui/core/colors/red';
 
 export default (options) => createMuiTheme({
     overrides: {
@@ -27,9 +28,12 @@ export default (options) => createMuiTheme({
         secondary: blue,
         type: options.darkMode ? 'dark' : 'light',
 
+        pink,
+        blue,
         green,
         grey,
         lightGreen,
         lime,
+        red,
     },
 });

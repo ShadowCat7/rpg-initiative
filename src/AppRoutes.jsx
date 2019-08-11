@@ -4,11 +4,11 @@ import { ThemeProvider } from '@material-ui/styles';
 
 import theme from './theme.js';
 import Layout from './Layout.jsx';
-import Home from './pages/Home.jsx';
-import Characters from './pages/Characters.jsx';
+import InitiativeTracker from './pages/InitiativeTracker.jsx';
 import Settings from './pages/Settings.jsx';
 import NotFound from './pages/NotFound.jsx';
 import Container from './redux/Container.jsx';
+import RecurringCharacters from './pages/RecurringCharacters.jsx';
 
 class AppRouter extends Component {
     shouldComponentUpdate(nextProps, nextState, nextContext) {
@@ -25,9 +25,9 @@ class AppRouter extends Component {
                 <Router>
                     <Layout>
                         <Switch>
-                            <Route path="/" component={Characters} exact />
-                            <Route path="/rpg-initiative" component={Characters} exact />
-                            <Route path="/rpg-initiative/initiative" component={Home} />
+                            <Route path="/" component={RecurringCharacters} exact />
+                            <Route path="/rpg-initiative" component={RecurringCharacters} exact />
+                            <Route path="/rpg-initiative/initiative" component={InitiativeTracker} />
                             <Route path="/rpg-initiative/settings" component={Settings} />
                             <Route component={NotFound} />
                         </Switch>

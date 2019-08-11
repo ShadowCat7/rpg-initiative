@@ -3,9 +3,12 @@ import { Provider } from 'react-redux';
 import { createStore } from 'redux';
 
 import AppRouter from './AppRoutes.jsx';
-import reducer from './redux/reducer.js';
+import reducer, { LOCAL_STORAGE_KEY } from './redux/reducer.js';
+import storageCreator from './utility/localStorage.js';
 
-const store = createStore(reducer);
+const storage = storageCreator(LOCAL_STORAGE_KEY);
+
+const store = createStore(reducer(storage.load()));
 
 class App extends Component {
     render() {

@@ -1,13 +1,13 @@
 
 export default (key) => ({
     load: () => {
-        let data;
+        let data = null;
 
         try {
             data = localStorage.getItem(key);
             data = JSON.parse(data);
         } catch (e) {
-            data = {};
+            data = null;
             console.error('Failed to load from localStorage');
         }
 
