@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/rpg-initiative/static/css/main.c54b00d3.chunk.css",
-    "main.js": "/rpg-initiative/static/js/main.512cbcbe.chunk.js",
-    "main.js.map": "/rpg-initiative/static/js/main.512cbcbe.chunk.js.map",
+    "main.js": "/rpg-initiative/static/js/main.6cfd8120.chunk.js",
+    "main.js.map": "/rpg-initiative/static/js/main.6cfd8120.chunk.js.map",
     "runtime~main.js": "/rpg-initiative/static/js/runtime~main.90666d56.js",
     "runtime~main.js.map": "/rpg-initiative/static/js/runtime~main.90666d56.js.map",
-    "static/js/2.3890d954.chunk.js": "/rpg-initiative/static/js/2.3890d954.chunk.js",
-    "static/js/2.3890d954.chunk.js.map": "/rpg-initiative/static/js/2.3890d954.chunk.js.map",
+    "static/js/2.d7b74da9.chunk.js": "/rpg-initiative/static/js/2.d7b74da9.chunk.js",
+    "static/js/2.d7b74da9.chunk.js.map": "/rpg-initiative/static/js/2.d7b74da9.chunk.js.map",
     "index.html": "/rpg-initiative/index.html",
-    "precache-manifest.a17891cccd23e22ac9626e9755c597c1.js": "/rpg-initiative/precache-manifest.a17891cccd23e22ac9626e9755c597c1.js",
+    "precache-manifest.5b46b1f238885c0a6b1177f97249dea7.js": "/rpg-initiative/precache-manifest.5b46b1f238885c0a6b1177f97249dea7.js",
     "service-worker.js": "/rpg-initiative/service-worker.js",
     "static/css/main.c54b00d3.chunk.css.map": "/rpg-initiative/static/css/main.c54b00d3.chunk.css.map"
   }
