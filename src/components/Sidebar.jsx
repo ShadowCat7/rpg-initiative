@@ -23,12 +23,12 @@ class Sidebar extends Component {
         return (
             <div className={classes.root}>
                 <List component="nav">
-                    <NavItem to="/" text="Recurring Characters" Icon={PersonAddIcon} onClick={this.props.onClose} />
-                    <NavItem to="/initiative" text="Initiative Tracker" Icon={ListIcon} onClick={this.props.onClose} />
+                    <NavItem to="/rpg-initiative" text="Recurring Characters" Icon={PersonAddIcon} onClick={this.props.onClose} />
+                    <NavItem to="/rpg-initiative/initiative" text="Initiative Tracker" Icon={ListIcon} onClick={this.props.onClose} />
                 </List>
                 <Divider />
                 <List>
-                    <NavItem to="/settings" text="Settings" Icon={SettingsIcon} onClick={this.props.onClose} />
+                    <NavItem to="/rpg-initiative/settings" text="Settings" Icon={SettingsIcon} onClick={this.props.onClose} />
                 </List>
             </div>
         );
